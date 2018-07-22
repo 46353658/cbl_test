@@ -1,7 +1,16 @@
 IDENTIFICATION DIVISION.
 PROGRAM-ID. HELLO-WORLD.
-* simple hello world program
+DATA DIVISION.
+WORKING-STORAGE SECTION.
+   77 A PIC 99.
+   77 B PIC 99.
+   77 C PIC 99.
+
 PROCEDURE DIVISION.
-    DISPLAY 'Hello world!'.
-    DISPLAY 'Additional display'.
-    STOP RUN.
+   DISPLAY 'Hello world!'.
+   DISPLAY 'Additional display'.
+   SET A TO 1.
+   SET B TO 3.
+   ADD A B GIVING C.
+   DISPLAY 'A + B = ' C.
+STOP RUN.
